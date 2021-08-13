@@ -921,7 +921,7 @@ public:
   RtAudio::Api getCurrentApi( void ) override { return RtAudio::UNIX_JACK; }
   unsigned int getDeviceCount( void ) override;
   RtAudio::DeviceInfo getDeviceInfo( unsigned int device ) override;
-  void closeStream( void ) override;
+  void closeStream( void ) final;
   void startStream( void ) override;
   void stopStream( void ) override;
   void abortStream( void ) override;
@@ -1063,7 +1063,7 @@ public:
   RtAudio::Api getCurrentApi() override { return RtAudio::LINUX_ALSA; }
   unsigned int getDeviceCount( void ) override;
   RtAudio::DeviceInfo getDeviceInfo( unsigned int device ) override;
-  void closeStream( void ) override;
+  void closeStream( void ) final;
   void startStream( void ) override;
   void stopStream( void ) override;
   void abortStream( void ) override;
@@ -1095,7 +1095,7 @@ public:
   RtAudio::Api getCurrentApi() override { return RtAudio::LINUX_PULSE; }
   unsigned int getDeviceCount( void ) override;
   RtAudio::DeviceInfo getDeviceInfo( unsigned int device ) override;
-  void closeStream( void ) override;
+  void closeStream( void ) final;
   void startStream( void ) override;
   void stopStream( void ) override;
   void abortStream( void ) override;
